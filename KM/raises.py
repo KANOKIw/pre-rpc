@@ -1,12 +1,3 @@
-"""(^^;
-
-Most Plite Visually Error Method
----------------------------------
-Will just open cmd.exe and echo there? `uwu`
-Hate Exceptions
-
-"""
-
 import subprocess
 import random
 import winshell
@@ -14,17 +5,14 @@ import os
 
 
 __all__ = (
-    'raiseError',
-    'win_cmd',
-    'raiseAlrRunningError'
+    "raiseError",
+    "win_cmd",
+    "raiseAlrRunningError"
 )
 
 
-class NoReturn:
-    """ due to exiting """
 
-
-def raiseError(__err, *, exx = None) -> NoReturn:
+def raiseError(__err, *, exx = None) -> None:
     console_command = 'cmd.exe'
 
     base = "echo 10 ERROR: " + __err
@@ -42,7 +30,7 @@ def raiseError(__err, *, exx = None) -> NoReturn:
 
 
 
-def win_cmd(__message: str, sourtcut_path: str, self_filename: str) -> NoReturn:
+def win_cmd(__message: str, sourtcut_path: str, self_filename: str) -> None:
     console_command = 'cmd.exe'
 
     base = "echo 10 INFO: " + __message
@@ -58,7 +46,7 @@ def win_cmd(__message: str, sourtcut_path: str, self_filename: str) -> NoReturn:
 
 
 
-def raiseAlrRunningError(self_filename) -> NoReturn:
+def raiseAlrRunningError(self_filename) -> None:
     console_command = 'cmd.exe'
     __err = f"FileAlreadyRunningError: && echo     There is a same program running already(excepted filename: {self_filename})"
 

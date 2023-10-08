@@ -1,10 +1,5 @@
-"""(^^;
-
-Base Methods for RPC Prog
---------------------------
-might be only used once a run
-
-errors are caused with raises.py
+"""
+errors are raised with raises.py
 
 """
 
@@ -16,21 +11,19 @@ import psutil
 import os
 import inspect
 
-from . import proc as RPCproc
-
 from . import (
-    raises
+    raises,
+    proc as RPCproc
 )
 
 
 __all__ = (
-    'checkfile',
-    'monitor_Game_exe'
+    "checkfile",
+    "monitor_Game_exe"
 )
 
 
-class loop:
-    """ never returns """
+class loop: ...
 
 
 def current_line(*arg, **kwarg) -> int:
@@ -39,8 +32,7 @@ def current_line(*arg, **kwarg) -> int:
 
 
 def check_config(path: str = None) -> dict:
-    r"""(^^;
-
+    r"""
     check config object -> `dict` 
 
     >>> 'RPCconfig.cfg': fp, must be the type like below::

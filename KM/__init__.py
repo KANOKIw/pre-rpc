@@ -1,18 +1,9 @@
-r"""(^^;
-
-A Custom RPC Maker - By `KANOKIw`
---------------------------------
-CutomRPC - By KNAOKIw
-
-A grouped unique RPC module
-
-There are mostly available what every discord user ever wanted
-
+r"""
 This module supports several RPC which was configured or directly modified.
 When Simultaneously application actived, won't have a huge bug.
 Latest application in the computer relates RPC.
 
-Most known useage::
+Most::
 
     >>> from KANOKIw_RPC_modules import (
             proc as RPCproc, # due to using proc as process
@@ -21,13 +12,13 @@ Most known useage::
         )
     or
     >>> import KANOKIw_RPC_modules
-        RPCprocess = KANOKIw_RPC_modules.RPCproc.RPCprocess
+        RPCprocess = KM.RPCproc.RPCprocess
 
 CTB::
 
     >>> while True:
             try:
-                baseMethods.monitor_Game_exe(config)
+                utils.monitor_Game_exe(config)
                 
             except Exception as e:
                 if e.__class__ != RuntimeError:
@@ -35,14 +26,12 @@ CTB::
                     sys.exit()                  ^^^^^
                 else: ...
 
-not a public package.
-
 """
 
 from . import (
-    basemthd,
     proc,
-    raises
+    raises,
+    utils
 )
 
 __title__ = "KANOKIw - RPC"

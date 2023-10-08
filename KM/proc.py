@@ -1,11 +1,3 @@
-"""(^^;
-
-Most Plite Base RPC `class`
-----------------------------
-A bit methods be like.
-
-"""
-
 import time
 
 from typing import overload
@@ -14,8 +6,7 @@ from pypresence import Presence
 globIP = ""
 
 def replaceSpecificCipher(cipher: str) -> str:
-    """(^^;
-
+    """
     replace given cipher with registered keywards 
     """
     global globIP
@@ -23,30 +14,24 @@ def replaceSpecificCipher(cipher: str) -> str:
     return cipher
 
 class RPCprocess:
-    r"""(^^;
-
-    The base for this program
-
-    RPC object: `self.RPC`
-
-    Parameters
-    -----------
-    RPCinfo: `class`: dict[`str`, `str`]
-        dict object keys includes [clientID, details, state]
-    
-    Methods
-    --------
-    start_RPC: `class` method -> `str`: ...
-        starts self RPC object
-    
-    close_RPC: `class` method -> `None`: ...
-        temporary close self RPC object -> `None`
-        
-    """
-
     RPC_on = False
 
     def __init__(self, RPCinfo: dict[str, str], instantglobIP: str) -> None:
+        r"""
+        Parameters
+        -----------
+        RPCinfo: `class`: dict[`str`, `str`]
+            dict object keys includes [clientID, details, state]
+        
+        Methods
+        --------
+        start_RPC: `class` method -> `str`: ...
+            starts self RPC object
+        
+        close_RPC: `class` method -> `None`: ...
+            temporary close self RPC object -> `None`
+            
+        """
         self.RPCinfo = RPCinfo
         self.clientID = self.RPCinfo["clientID"]
         
@@ -63,8 +48,7 @@ class RPCprocess:
 
 
     def start_RPC(self, RPCinfo: dict[str, str]) -> str:
-        r"""(^^;
-
+        r"""
         starts RPC with the client `RPCinfo['clientID']` 
 
         Parameters
@@ -122,8 +106,7 @@ class RPCprocess:
     
 
     def update_RPC(self, RPCinfo: dict[str, str]) -> str:
-        r"""(^^;
-
+        r"""
         updates RPC with the client `RPCinfo['clientID']` 
 
         Parameters

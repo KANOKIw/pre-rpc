@@ -10,12 +10,12 @@ import gc
 import time
 
 from KM import (
-    basemthd as bm,
-    raises
+    raises,
+    utils as bm
 )
 
-config_fp = "RPCconfig.cfg"
-globIP = requests.get('https://ifconfig.me').text
+config_fp = "rpc.json"
+globIP = requests.get("https://ifconfig.me").text
 # yaml
 
 if __name__ == "__main__":

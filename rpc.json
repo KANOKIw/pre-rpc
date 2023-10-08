@@ -1,0 +1,15 @@
+{
+    "update_sec": 1,
+    "RPC": {
+        "Human.exe": {
+            "clientID": "0",
+            "details": "a",
+            "state": "b",
+            "large_image": "c",
+            "large_text": "Human Fall Flat",
+            "small_image": "d",
+            "small_text": "No Breaks Games"
+        }
+    },
+    "Hello": "Yo"
+}
